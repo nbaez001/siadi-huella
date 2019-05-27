@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/siadi</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">1234</property>
+    <mapping resource="com/besoft/siadi/entity/Sancion.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Marca.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Colaborador.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Contrato.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Funcion.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Compra.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Merma.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Justificacion.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Detallemovimiento.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Tablamaestra.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Moduloacceso.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Cliente.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Bobeda.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Transaccion.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Almacen.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Proveedorjuridico.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Vacacion.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Clientenatural.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Caja.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Representantelegal.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Control.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Detalleventa.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Producto.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Modulo.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Rol.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Representantlegal.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Departamento.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Proveedor.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Comprobante.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Distrito.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Credito.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Dependencia.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Inventario.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Cajero.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Movimiento.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Inventarioiniciomes.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Asistencia.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Pais.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Proveedornatural.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Usuario.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Funcionacceso.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Cuota.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Detallecompra.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Transferencia.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Andamio.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Permiso.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Rolacceso.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Clientejuridico.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Categoria.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Agencia.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Turno.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Provincia.hbm.xml"/>
+    <mapping resource="com/besoft/siadi/entity/Venta.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/06/2017 09:12:05 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Permiso" optimistic-lock="version" schema="public" table="permiso">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">permiso_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Contrato" fetch="select" lazy="false" name="contrato">
+      <column name="idcontrato" not-null="true"/>
+    </many-to-one>
+    <property name="idttipopermiso" type="int">
+      <column name="idttipopermiso" not-null="true"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="13" name="fecha" not-null="true"/>
+    </property>
+    <property name="horasalida" type="timestamp">
+      <column length="29" name="horasalida" not-null="true"/>
+    </property>
+    <property name="horaretorno" type="timestamp">
+      <column length="29" name="horaretorno"/>
+    </property>
+    <property name="autorizja" type="int">
+      <column name="autorizja" not-null="true"/>
+    </property>
+    <property name="autorizjp" type="int">
+      <column name="autorizjp" not-null="true"/>
+    </property>
+    <property name="destino" type="string">
+      <column length="250" name="destino"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="250" name="descripcion"/>
+    </property>
+  </class>
+</hibernate-mapping>

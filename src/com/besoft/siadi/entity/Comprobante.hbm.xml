@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Comprobante" optimistic-lock="version" schema="public" table="comprobante">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">comprobante_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Agencia" fetch="select" lazy="false" name="agencia">
+      <column name="idagencia" not-null="true"/>
+    </many-to-one>
+    <property name="idttipocomprobante" type="int">
+      <column name="idttipocomprobante" not-null="true"/>
+    </property>
+    <property name="nombre" type="string">
+      <column length="100" name="nombre" not-null="true"/>
+    </property>
+    <property name="abreviatura" type="string">
+      <column length="10" name="abreviatura" not-null="true"/>
+    </property>
+    <property name="numero" type="int">
+      <column name="numero" not-null="true"/>
+    </property>
+    <property name="serie" type="int">
+      <column name="serie" not-null="true"/>
+    </property>
+    <property name="longnumero" type="int">
+      <column name="longnumero" not-null="true"/>
+    </property>
+    <property name="longserie" type="int">
+      <column name="longserie" not-null="true"/>
+    </property>
+    <property name="estado" type="boolean">
+      <column name="estado" not-null="true"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>

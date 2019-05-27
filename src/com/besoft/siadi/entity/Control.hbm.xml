@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/06/2017 09:32:30 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Control" optimistic-lock="version" schema="public" table="control">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">control_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Contrato" fetch="select" lazy="false" name="contrato">
+      <column name="idcontrato" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.besoft.siadi.entity.Justificacion" fetch="select" lazy="false" name="justificacion">
+      <column name="idjustificacion"/>
+    </many-to-one>
+    <many-to-one class="com.besoft.siadi.entity.Permiso" fetch="select" lazy="false" name="permiso">
+      <column name="idpermiso"/>
+    </many-to-one>
+    <many-to-one class="com.besoft.siadi.entity.Sancion" fetch="select" lazy="false" name="sancion">
+      <column name="idsancion"/>
+    </many-to-one>
+    <property name="fecha" type="date">
+      <column length="13" name="fecha" not-null="true"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>

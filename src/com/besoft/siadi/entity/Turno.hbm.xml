@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/06/2017 09:12:05 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.besoft.siadi.entity.Turno" optimistic-lock="version" schema="public" table="turno">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+                <param name="sequence">turno_id_seq</param>
+            </generator>
+        </id>
+        <many-to-one class="com.besoft.siadi.entity.Contrato" fetch="select" lazy="false" name="contrato">
+            <column name="idcontrato" not-null="true"/>
+        </many-to-one>
+        <property name="idttipoturno" type="int">
+            <column name="idttipoturno" not-null="true"/>
+        </property>
+        <property name="horaentrada" type="timestamp">
+            <column length="29" name="horaentrada" not-null="true"/>
+        </property>
+        <property name="horasalida" type="timestamp">
+            <column length="29" name="horasalida" not-null="true"/>
+        </property>
+        <property name="dia" type="int">
+            <column name="dia" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

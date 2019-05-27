@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/06/2017 09:12:05 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.besoft.siadi.entity.Asistencia" optimistic-lock="version" schema="public" table="asistencia">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="sequence">
+                <param name="sequence">asistencia_id_seq</param>
+            </generator>
+        </id>
+        <many-to-one class="com.besoft.siadi.entity.Contrato" fetch="select" lazy="false" name="contrato">
+            <column name="idcontrato" not-null="true"/>
+        </many-to-one>
+        <property name="idturno" type="int">
+            <column name="idturno" not-null="true" />
+        </property>
+        <property name="idttipoasistencia" type="int">
+            <column name="idttipoasistencia" not-null="true" />
+        </property>
+        <property name="tardanza" type="int">
+            <column name="tardanza" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="13" not-null="true" />
+        </property>
+        <property name="horaentrada" type="timestamp">
+            <column name="horaentrada" length="29" not-null="true" />
+        </property>
+        <property name="horasalida" type="timestamp">
+            <column name="horasalida" length="29" />
+        </property>
+        <property name="rhoraentrada" type="timestamp">
+            <column name="rhoraentrada" length="29" not-null="true" />
+        </property>
+        <property name="rhorasalida" type="timestamp">
+            <column name="rhorasalida" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>

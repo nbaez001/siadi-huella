@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Agencia" optimistic-lock="version" schema="public" table="agencia">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">agencia_id_seq</param>
+      </generator>
+    </id>
+    <property name="iddistrito" type="int">
+      <column name="iddistrito" not-null="true"/>
+    </property>
+    <property name="razonsocial" type="string">
+      <column length="200" name="razonsocial" not-null="true"/>
+    </property>
+    <property name="nombrecomercial" type="string">
+      <column length="200" name="nombrecomercial" not-null="true"/>
+    </property>
+    <property name="ruc" type="long">
+      <column name="ruc" not-null="true" precision="11" scale="0"/>
+    </property>
+    <property name="telefono" type="long">
+      <column name="telefono" not-null="true" precision="11" scale="0"/>
+    </property>
+    <property name="urllogo" type="string">
+      <column length="300" name="urllogo" not-null="true"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="100" name="direccion" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

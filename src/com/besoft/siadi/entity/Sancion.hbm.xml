@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 03/06/2017 09:12:05 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Sancion" optimistic-lock="version" schema="public" table="sancion">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">sancion_id_seq</param>
+      </generator>
+    </id>
+    <property name="idtiposancion" type="int">
+      <column name="idtiposancion" not-null="true"/>
+    </property>
+    <property name="fechainicio" type="date">
+      <column length="13" name="fechainicio" not-null="true"/>
+    </property>
+    <property name="fechafin" type="date">
+      <column length="13" name="fechafin" not-null="true"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="250" name="descripcion"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Inventario" optimistic-lock="version" schema="public" table="inventario">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">inventario_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Andamio" fetch="select" lazy="false" name="andamio">
+      <column name="idandamio" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.besoft.siadi.entity.Producto" fetch="select" lazy="false" name="producto">
+      <column name="idproducto" not-null="true"/>
+    </many-to-one>
+    <property name="cantidad" type="double">
+      <column name="cantidad" not-null="true" precision="11" scale="1"/>
+    </property>
+    <property name="preciomenmin" type="double">
+      <column name="preciomenmin" not-null="true" precision="8" scale="2"/>
+    </property>
+    <property name="preciomenmax" type="double">
+      <column name="preciomenmax" not-null="true" precision="8" scale="2"/>
+    </property>
+    <property name="preciomaymin" type="double">
+      <column name="preciomaymin" not-null="true" precision="8" scale="2"/>
+    </property>
+    <property name="preciomaymax" type="double">
+      <column name="preciomaymax" not-null="true" precision="8" scale="2"/>
+    </property>
+    <property name="estado" type="boolean">
+      <column name="estado" not-null="true"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Provincia" optimistic-lock="version" schema="public" table="provincia">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Departamento" fetch="select" lazy="false" name="departamento">
+      <column name="iddepartamento" not-null="true"/>
+    </many-to-one>
+    <property name="denominacion" type="string">
+      <column length="50" name="denominacion" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

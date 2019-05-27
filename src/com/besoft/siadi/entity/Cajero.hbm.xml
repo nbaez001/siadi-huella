@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Cajero" optimistic-lock="version" schema="public" table="cajero">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">cajero_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Caja" fetch="select" lazy="false" name="caja">
+      <column name="idcaja" not-null="true"/>
+    </many-to-one>
+    <property name="idusuario" type="int">
+      <column name="idusuario" not-null="true"/>
+    </property>
+    <property name="saldoapertura" type="double">
+      <column name="saldoapertura" not-null="true" precision="10"/>
+    </property>
+    <property name="saldocierre" type="double">
+      <column name="saldocierre" not-null="true" precision="10"/>
+    </property>
+    <property name="fechaapertura" type="timestamp">
+      <column length="29" name="fechaapertura" not-null="true"/>
+    </property>
+    <property name="fechacierre" type="timestamp">
+      <column length="29" name="fechacierre"/>
+    </property>
+    <property name="estado" type="boolean">
+      <column name="estado" not-null="true"/>
+    </property>
+    <property name="pendiente" type="boolean">
+      <column name="pendiente" not-null="true"/>
+    </property>
+    <property name="diezc" type="java.lang.Integer">
+      <column name="diezc"/>
+    </property>
+    <property name="veintec" type="java.lang.Integer">
+      <column name="veintec"/>
+    </property>
+    <property name="cincuentac" type="java.lang.Integer">
+      <column name="cincuentac"/>
+    </property>
+    <property name="uns" type="java.lang.Integer">
+      <column name="uns"/>
+    </property>
+    <property name="doss" type="java.lang.Integer">
+      <column name="doss"/>
+    </property>
+    <property name="cincos" type="java.lang.Integer">
+      <column name="cincos"/>
+    </property>
+    <property name="diezs" type="java.lang.Integer">
+      <column name="diezs"/>
+    </property>
+    <property name="veintes" type="java.lang.Integer">
+      <column name="veintes"/>
+    </property>
+    <property name="cincuentas" type="java.lang.Integer">
+      <column name="cincuentas"/>
+    </property>
+    <property name="ciens" type="java.lang.Integer">
+      <column name="ciens"/>
+    </property>
+    <property name="doscientoss" type="java.lang.Integer">
+      <column name="doscientoss"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>

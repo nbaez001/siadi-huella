@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Bobeda" optimistic-lock="version" schema="public" table="bobeda">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">bobeda_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Agencia" fetch="select" lazy="false" name="agencia">
+      <column name="idagencia" not-null="true"/>
+    </many-to-one>
+    <property name="nombre" type="string">
+      <column length="100" name="nombre" not-null="true"/>
+    </property>
+    <property name="montoapertura" type="double">
+      <column name="montoapertura" not-null="true" precision="10"/>
+    </property>
+    <property name="montocierre" type="double">
+      <column name="montocierre" not-null="true" precision="10"/>
+    </property>
+    <property name="fechaapertura" type="timestamp">
+      <column length="29" name="fechaapertura" not-null="true"/>
+    </property>
+    <property name="fechacierre" type="timestamp">
+      <column length="29" name="fechacierre"/>
+    </property>
+    <property name="estado" type="boolean">
+      <column name="estado" not-null="true"/>
+    </property>
+    <property name="diezc" type="int">
+      <column name="diezc" not-null="true"/>
+    </property>
+    <property name="veintec" type="int">
+      <column name="veintec" not-null="true"/>
+    </property>
+    <property name="cincuentac" type="int">
+      <column name="cincuentac" not-null="true"/>
+    </property>
+    <property name="uns" type="int">
+      <column name="uns" not-null="true"/>
+    </property>
+    <property name="doss" type="int">
+      <column name="doss" not-null="true"/>
+    </property>
+    <property name="cincos" type="int">
+      <column name="cincos" not-null="true"/>
+    </property>
+    <property name="diezs" type="int">
+      <column name="diezs" not-null="true"/>
+    </property>
+    <property name="veintes" type="int">
+      <column name="veintes" not-null="true"/>
+    </property>
+    <property name="cincuentas" type="int">
+      <column name="cincuentas" not-null="true"/>
+    </property>
+    <property name="ciens" type="int">
+      <column name="ciens" not-null="true"/>
+    </property>
+    <property name="doscientoss" type="int">
+      <column name="doscientoss" not-null="true"/>
+    </property>
+    <property name="diezcz" type="int">
+      <column name="diezcz" not-null="true"/>
+    </property>
+    <property name="veintecz" type="int">
+      <column name="veintecz" not-null="true"/>
+    </property>
+    <property name="cincuentacz" type="int">
+      <column name="cincuentacz" not-null="true"/>
+    </property>
+    <property name="unsz" type="int">
+      <column name="unsz" not-null="true"/>
+    </property>
+    <property name="dossz" type="int">
+      <column name="dossz" not-null="true"/>
+    </property>
+    <property name="cincosz" type="int">
+      <column name="cincosz" not-null="true"/>
+    </property>
+    <property name="diezsz" type="int">
+      <column name="diezsz" not-null="true"/>
+    </property>
+    <property name="veintesz" type="int">
+      <column name="veintesz" not-null="true"/>
+    </property>
+    <property name="cincuentasz" type="int">
+      <column name="cincuentasz" not-null="true"/>
+    </property>
+    <property name="ciensz" type="int">
+      <column name="ciensz" not-null="true"/>
+    </property>
+    <property name="doscientossz" type="int">
+      <column name="doscientossz" not-null="true"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>

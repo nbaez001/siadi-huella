@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/10/2016 03:16:52 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.besoft.siadi.entity.Cuota" optimistic-lock="version" schema="public" table="cuota">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="sequence">
+        <param name="sequence">cuota_id_seq</param>
+      </generator>
+    </id>
+    <many-to-one class="com.besoft.siadi.entity.Credito" fetch="select" lazy="false" name="credito">
+      <column name="idcredito"/>
+    </many-to-one>
+    <property name="idcajero" type="int">
+      <column name="idcajero" not-null="true"/>
+    </property>
+    <property name="idttipocomprobante" type="int">
+      <column name="idttipocomprobante" not-null="true"/>
+    </property>
+    <property name="nrocomprobante" type="string">
+      <column length="10" name="nrocomprobante" not-null="true"/>
+    </property>
+    <property name="seriecomprobante" type="string">
+      <column length="10" name="seriecomprobante" not-null="true"/>
+    </property>
+    <property name="monto" type="double">
+      <column name="monto" not-null="true" precision="10" scale="2"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="13" name="fecha" not-null="true"/>
+    </property>
+    <property name="detalle" type="string">
+      <column length="100" name="detalle"/>
+    </property>
+    <property name="idusuariocrea" type="int">
+      <column name="idusuariocrea" not-null="true"/>
+    </property>
+    <property name="fechusuariocrea" type="date">
+      <column length="13" name="fechusuariocrea" not-null="true"/>
+    </property>
+    <property name="idusuariomod" type="java.lang.Integer">
+      <column name="idusuariomod"/>
+    </property>
+    <property name="fechusuariomod" type="date">
+      <column length="13" name="fechusuariomod"/>
+    </property>
+  </class>
+</hibernate-mapping>
